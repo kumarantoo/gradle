@@ -16,8 +16,9 @@
 
 package org.gradle.api.internal.tasks;
 
-import org.gradle.api.internal.tasks.properties.InputFilePropertyType;
+import org.gradle.api.internal.tasks.properties.OutputFilePropertyType;
+import org.gradle.api.tasks.TaskOutputFilePropertyBuilder;
 
-public interface DeclaredTaskInputFileProperty extends TaskInputFilePropertySpec, TaskInputFilePropertyBuilderInternal, ValidatingTaskPropertySpec {
-    InputFilePropertyType getFilePropertyType();
+public interface DeclaredTaskOutputFilePropertySpec extends TaskFilePropertySpec, TaskOutputFilePropertyBuilder {
+    OutputFilePropertyType getPropertyType();
 }
